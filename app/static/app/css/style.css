@@ -1,0 +1,128 @@
+.owl-carousel .item{
+ /* border: 1px solid black; */
+ font-size: 24px;
+ text-align: center;
+ margin-top: 20px;;
+}
+
+.owl-next{
+ float:right;
+}
+.owl-prev{
+ float:left;
+}
+.owl-prev span{
+ font-size: 24px;
+ font-weight: bold;
+}
+.owl-next span{
+ font-size: 24px;
+ font-weight: bold;
+}
+
+/* Website */
+
+body{
+    font-family: "Amazon Ember",Arial,sans-serif;
+}
+
+.font_weight {
+    font-weight: 550;
+}
+
+.price-color {
+    color: #B12704;
+    font-family: "Amazon Ember",Arial,sans-serif;
+
+}
+
+.price-color-hover:hover {
+    color: #B12704;
+}
+
+.fonts {
+    font-size: 14px;
+}
+
+/* customized */
+
+header {
+    height: 60px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1), 0 2px 2px rgba(0, 0, 0, .06), 0 0 2px rgba(0, 0, 0, .07);
+}
+
+.header-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.find-store i {
+    text-align: center;
+    padding-right: 8px;
+    font-size: 20px;
+}
+
+.find-store {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 8px;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.find-store:hover {
+    color: #008248;
+}
+
+.sign-in, .sign-up {
+    padding: 7px 15px;
+    border: 1px solid;
+    border-radius: 50px;
+    line-height: 1.2;
+}
+
+.sign-up {
+    background-color: black;
+    border-color: rgba(0,0,0,.7);
+    color: white;
+}
+
+.sign-up:hover {
+    background-color: rgba(0,0,0,.7);
+    border-color: rgba(0,0,0,.7);
+}
+
+.sign-in:hover {
+    background-color: rgba(0, 0, 0, .06);
+}
+
+
+/* search */
+
+.form-control:focus {
+box-shadow: none;
+}
+
+.form-control-underlined {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    padding-left: 0;
+}
+
+.form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+.search{
+    align-items: center;
+    padding: auto;
+    text-align: center;
+    padding-top: 8px;
+}

@@ -1,0 +1,44 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+ <div class="row">
+ <h3>Welcome <span class='text-capitalize'>{{request.user}}</h3>
+  <div class="col-sm-2 border-end">
+   <ul class="list-unstyled">
+    <li class="d-grid my-3"><a href="{% url 'profile' %}" class="btn btn-outline-dark">Profile</a></li>
+    <li class="d-grid my-3"><a href="{% url 'address' %}" class="btn btn-outline-dark active">Address</a></li>
+   </ul>
+  </div>
+  <div class="col-sm-9 offset-sm-1">
+   <div class="row">
+
+    {% if addresses %}
+        {% for ad in addresses %}
+        <div class="col-sm-6 my-2">
+        <div class="card">
+        <div class="card-body">
+        <h3>Address {{forloop.counter}}</h3>
+        <p>Name: {{ad.name}}</p>
+        {% comment %} <p>Flat, House no., Building, Company, Apartment: {{ad.apartment}}</p>
+        <p>Area, Street, Sector, Village: {{ad.area}}</p> {% endcomment %}
+        <p>Locality: {{ad.locality}}</p>
+        <p>City: {{ad.city}}</p>
+        <p>Pin Code: {{ad.zipcode}}</p>
+        <p>State: {{ad.state}}</p>
+        </div>
+        </div>
+        </div>
+        {% endfor %}
+
+    {% else %}
+        <p class="font_weight">You haven't created any address. <a href="/profile/">Click </a>to create</p>
+    {% endif %}
+
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+{% endblock main-content %}

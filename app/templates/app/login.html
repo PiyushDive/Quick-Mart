@@ -1,0 +1,57 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Login{% endblock title %}
+{% block main-content %}
+{% load socialaccount %}
+
+<div class="container">
+    <div class="row my-3">
+        <div class="col-sm-6 offset-sm-3">
+            <h3 class="text-center font_weight">Login to <span class="text-primary">Flipkart</span></h3>
+            <hr>
+            <form action="{% url 'login' %}" method="post" novalidate class="shadow p-5">
+                {% csrf_token %}
+                
+                {% if form.non_field_errors %}
+                    {% for error in form.non_field_errors %}
+                        <p class='alert alert-danger my-3'>{{error}}</p>
+                    {% endfor %}
+                {% endif %}
+
+                {% if messages %}
+                    {% for message in messages %}
+                    <p class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </p>
+                    {% endfor %}
+                {% endif %}
+                {% for fm in form %}
+                    <div class="form-group">
+                        {{fm.label_tag}} {{fm}} <small class='text-danger'>{{fm.errors|striptags}}</small>
+                        <br>
+                    </div>
+                {% endfor %}
+                <small><a href="{% url 'password_reset' %}">Forgot Password ?</a></small> <br>
+                <input type="submit" class="mb-2 btn btn-primary mt-4" value="Login">
+                
+                <p class="text-center">Or</p>
+
+                <div class="row my-2">
+                    <div class="col-sm-6 offset-sm-3">
+                        <a style="border: black; border-radius: 7px;" class="btn btn-dark" href="{% provider_login_url 'google' %}" role="button">
+                            <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                            <span style="font-weight: 500;">Login with Google</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="my-3 text-center text-primary fw-bold"><small>New to Flipkart ? <a
+                            href="{% url 'customerregistration' %}" class="text-danger">Create an Account</a> </small>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}
