@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row my-3">
         <div class="col-sm-6 offset-sm-3">
-            <h3 class="text-center font_weight">Login to <span class="text-primary">Flipkart</span></h3>
+            <h3 class="text-center font_weight">Login to <span class="text-primary">QuickMart</span></h3>
             <hr>
             <form action="{% url 'login' %}" method="post" novalidate class="shadow p-5">
                 {% csrf_token %}
@@ -46,7 +46,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="my-3 text-center text-primary fw-bold"><small>New to Flipkart ? <a
+                <div class="my-3 text-center text-primary fw-bold"><small>New to QuickMart ? <a
                             href="{% url 'customerregistration' %}" class="text-danger">Create an Account</a> </small>
                 </div>
 
