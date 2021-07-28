@@ -18,9 +18,9 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-admin.site.site_header = 'Flipkart Admin'
-admin.site.site_title = 'Flipkart Admin Panel'
-admin.site.index_title = 'Welcome to Flipkart Admin Panel'
+admin.site.site_header = 'QuickMart Admin'
+admin.site.site_title = 'QuickMart Admin Panel'
+admin.site.index_title = 'Welcome to QuickMart Admin Panel'
 
 urlpatterns = [
     # path('jet/', include('jet.urls', 'jet')),
