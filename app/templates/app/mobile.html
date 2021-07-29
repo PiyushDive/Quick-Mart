@@ -36,8 +36,8 @@
                         <a href="{% url 'product-detail' product.id %}" class='btn'>
                             <div class="item">
                                 <img src="{{product.product_image.url}}" height='300' alt="">
-                                <div class='fw-bold'>{{product.title}}</div>
-                                <div class='fw-bold price-color-hover'>&#8377;{{product.discounted_price|intcomma}}
+                                <div class='fw-bold price-color-hover'>{{product.title}}</div>
+                                <div class='fw-bold'>&#8377;{{product.discounted_price|intcomma}}
                                 <small class='fw-light text-decoration-line-through text-muted fonts'>&#8377;{{product.selling_price|intcomma}}</small></div>
                             </div>
                         </a>
