@@ -1,1 +1,1 @@
-web: gunicorn quick-mart.wsgi:application --preload --workers 1
+web: gunicorn quick-mart.wsgi --log-file -
