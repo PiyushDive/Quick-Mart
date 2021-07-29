@@ -1,1 +1,1 @@
-web: gunicorn quick-mart.wsgi --log-file -
+web: gunicorn shoppinglyx.wsgi --log-file -
