@@ -126,3 +126,70 @@
 <!-- End 3rd Product Slider -->
 
 {% endblock main-content %}
+
+{% block down-nav %}
+<!-- Start Down Nav -->
+<section id="hamburger" class="text-center">
+  <hr class="text-dark">
+  <div>
+    <ul class="navbar-nav me-auto mb-0">
+      <li class="nav-item dropdown mb-0">
+        <a class="nav-link mb-0 dropdown-toggle text-dark font_weight" href="#" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Electronics
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
+          <li><a class="dropdown-item" href="{% url 'mobile' %}">Mobile</a></li>
+          <li><a class="dropdown-item" href="#">Laptop</a></li>
+        </ul>
+      </li>
+      <hr class="text-dark">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark font_weight" href="#" id="fashionDropdown" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Fashion
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="fashionDropdown">
+          <li><a class="dropdown-item" href="#">Top Wear</a></li>
+          <li><a class="dropdown-item" href="#">Bottom Wear</a></li>
+        </ul>
+      </li>
+    </ul>
+    <hr class="text-dark">
+
+    <!-- Login Start -->
+    <div>
+      <ul class="navbar-nav me-auto mb-0">
+      {% if request.user.is_authenticated %}
+        <li class="nav-item dropdown mb-0 mx-2">
+          <a class="nav-link dropdown-toggle text-dark font_weight" href="#" id="profileDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <span class='text-capitalize'>{{request.user}}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+            <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
+            <li><a class="dropdown-item" href="{% url 'orders' %}">Orders</a></li>
+            <li><a class="dropdown-item" href="{% url 'change_password' %}">Change Password</a></li>
+            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+          </ul>
+        </li>
+        <hr>
+        <li class="nav-item mx-2">
+          <a href="{% url 'show_cart' %}" class="nav-link text-dark font_weight"><span class="badge bg-danger">{{total_items}}</span> Cart
+          </a>
+        </li>
+      {% else %}
+        <li class="mx-2">
+          <a href="{% url 'login' %}" class="text-decoration-none font_weight text-dark sign-in">Login</a>
+        </li>
+        <hr class="text-dark">
+        <li class="mx-2 mb-0">
+          <a href="{% url 'customerregistration' %}" class="text-decoration-none font_weight text-dark sign-up">Sign Up</a>
+        </li>
+      {% endif %}
+      </ul>
+    </div>
+    <!-- End Login -->
+</section>
+<!-- End Down Nav -->
+{% endblock down-nav %}

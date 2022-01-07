@@ -22,16 +22,20 @@
 
   <title>QuickMart | {% block title %} {% endblock title %} </title>
 </head>
-
 <body>
+
 <header>
   <nav class="navbar navbar-expand-lg mx-5 header-container">
       <a class="navbar-brand font_weight" href="/">QuickMart</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <!-- Hamburger -->
+      <section>
+        <a href="javascript: document.body.scrollIntoView(false);" class="link-dark" media="screen and (max-width:1003px)">
+          <i class="fas fa-bars"></i>
+        </a>
+      </section>
+
+      <div class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-dark font_weight" href="#" id="electronicsDropdown" role="button"
@@ -96,16 +100,21 @@
           </ul>
         </div>
       </div>
-  </nav>
+    </nav>
 </header>
-
+<!-- End Navbar -->
+  
+<!-- Start Blocks -->
   {% block banner_slider %} {% endblock banner_slider %}
   {% block livesale %} {% endblock livesale %}
   {% block main-content %} {% endblock main-content %}
   {% block payment-gateway %} {% endblock payment-gateway %}
+  {% block down-nav %} {% endblock down-nav %}
+<!-- End Blocks -->
+
 
   <!-- Start Footer -->
-  <footer class="container-fluid bg-dark text-center p-2 mt-5">
+  <footer class="container-fluid bg-dark text-center p-2 mt-4">
     <small class="text-white">Copyright &copy; 2021 || Designed By <b>Piyush Dive</b> || </small>
     <img src="{% static 'app/images/payment.png' %}" alt="" srcset="" class="img-fluid" height="2px">
   </footer>
@@ -127,3 +136,12 @@
 </body>
 
 </html>
+
+
+<!-- line 32 -->
+
+<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button> -->
+      

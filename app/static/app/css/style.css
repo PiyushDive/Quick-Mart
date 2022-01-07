@@ -126,3 +126,41 @@ box-shadow: none;
     text-align: center;
     padding-top: 8px;
 }
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section a{
+    display: none;
+}
+
+#hamburger{
+    display: none;
+}
+
+/* hamburger Design */
+
+@media only screen and (max-width: 1000px){
+    nav div{
+        display: none;
+    }
+    section a{
+        display: contents;
+    }
+
+    #hamburger{
+        display: contents;
+    }
+
+    nav i{
+        float: right;
+    }
+
+    .header-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
