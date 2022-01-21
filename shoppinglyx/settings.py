@@ -27,7 +27,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 SECRET_KEY = 'gp%9xqrt#_c45@)$i0w*@7^(v%zq+s0!a_(keuqkm=y*r1+jv*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['quick-mart.herokuapp.com', 'localhost']
 
