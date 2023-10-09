@@ -4,7 +4,7 @@ from django.conf.urls.static import static
 from . import views
 from .forms import LoginForm, PassChangeForm, PassResetForm, SetPassForm
 from django.contrib.auth import views as auth_views
-
+# akshay chaudhari 
 urlpatterns = [
     path('', views.HomeView.as_view(), name='home'),
     path('product-detail/<int:pk>/', views.ProductDetailView.as_view(), name='product-detail'),
