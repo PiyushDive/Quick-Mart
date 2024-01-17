@@ -38,11 +38,11 @@
                 <p class="text-center">Or</p>
 
                 <div class="row my-2 text-center">
-                    <div class="col-sm-6 offset-sm-3">
-                        <a style="border: black; border-radius: 7px;" class="btn btn-dark" href="{% provider_login_url 'google' %}" role="button">
-                            <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
-                            <span style="font-weight: 500;">Login with Google</span>
+                    <div class="col-sm-5 offset-sm-3">
+                        <a href="{% provider_login_url 'google' %}" role="button">
+                            <img width="200px" style="margin-bottom:3px; margin-right:50px" alt="Google sign-in"
+                                src="https://developers.google.com/static/identity/images/branding_guideline_sample_dk_rd_lg.svg" />
+                            {% comment %} <span style="font-weight: 500;">Login with Google</span> {% endcomment %}
                         </a>
                     </div>
                 </div>
